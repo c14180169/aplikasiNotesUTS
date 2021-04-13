@@ -25,5 +25,5 @@ export interface Note {
   isi : string;
   tanggal : string;
   nilai : string;
-  gambar : string;
+  gambar : string[];
 }

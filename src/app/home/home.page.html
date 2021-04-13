@@ -16,6 +16,10 @@
     <ion-item>{{note.isi}}</ion-item>
     <ion-item>{{note.tanggal}}</ion-item>
     <ion-item>{{note.nilai}}</ion-item>
+    <ion-item *ngFor="let i of note.gambar">
+      <ion-img [src]="i"></ion-img>
+    </ion-item>
+    
   </ion-card>
 
 </ion-content>
