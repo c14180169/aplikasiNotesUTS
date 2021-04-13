@@ -16,9 +16,10 @@
     <ion-item>{{note.isi}}</ion-item>
     <ion-item>{{note.tanggal}}</ion-item>
     <ion-item>{{note.nilai}}</ion-item>
-    <ion-item *ngFor="let i of note.gambar">
-      <ion-img [src]="i"></ion-img>
-    </ion-item>
+    <ion-img [src]="note.gambar"></ion-img>
+
+    <ion-button fill="outline" (click)="editData(note.id)">EDIT DATA</ion-button>
+    <ion-button color="danger" (click)="hapusData(note.id)">HAPUS DATA</ion-button>
     
   </ion-card>
 

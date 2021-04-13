@@ -80,6 +80,21 @@ export class HomePage {
       console.log(error);
     })
   }
+
+  editData(id : string){
+    this.noteCol.doc(id).update({
+      judul : "judul_update",
+      isi : "isi_update",
+      tanggal : "tgl_update",
+      nilai : "nilai_update"
+    });
+    
+    console.log("Update berhasil");
+  }
+
+  hapusData(id : string){
+    this.noteCol.doc(id).delete();
+  }
 }
 
 export interface FileStorage{
