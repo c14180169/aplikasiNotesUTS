@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tambah-note',
+    loadChildren: () => import('./tambah-note/tambah-note.module').then( m => m.TambahNotePageModule)
+  },
 ];
 
 @NgModule({
